@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="box">
+      <input type="text" id="result" readonly>
+      <table>
+        <tr>
+          <td><button onclick="addInput('7')">7</button></td>
+          <td><button onclick="addInput('8')">8</button></td>
+          <td><button onclick="addInput('9')">9</button></td>
+          <td><button onclick="addInput('/')">/</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addInput('4')">4</button></td>
+          <td><button onclick="addInput('5')">5</button></td>
+          <td><button onclick="addInput('6')">6</button></td>
+          <td><button onclick="addInput('*')">*</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addInput('1')">1</button></td>
+          <td><button onclick="addInput('2')">2</button></td>
+          <td><button onclick="addInput('3')">3</button></td>
+          <td><button onclick="addInput('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="addInput('0')">0</button></td>
+          <td><button onclick="addInput('.')">.</button></td>
+          <td><button onclick="clearInput()">C</button></td>
+          <td><button onclick="addInput('+')">+</button></td>
+        </tr>
+        <tr>
+          <td colspan="4"><button onclick="calculate()">=</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
