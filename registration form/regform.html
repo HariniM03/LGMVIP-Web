@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="regform1.css">
+  </head>
+  <body>
+    <div class="registration-form">
+      <h2>Registration Form</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <label for="university">University:</label>
+        <input type="text" id="university" name="university" required>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required>
+
+        <label for="industry">Industry:</label>
+        <select id="industry" name="industry" onchange="populateSkills()" required>
+          <option value="" disabled selected>Select an industry</option>
+          <option value="tech">Technology</option>
+          <option value="finance">Finance</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="education">Education</option>
+        </select>
+
+        <label for="skills">Skills:</label>
+        <select id="skills" name="skills" required>
+          <option value="" disabled selected>Select your skills</option>
+        </select>
+
+        <label>Gender:</label>
+        <div class="gender-field">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" required>
+          <label for="other">Other</label>
+        </div>
+
+        <input type="submit" value="Submit" onclick="submitForm(event)">
+        <input type="reset" onclick="clearForm()"></button>
+      </form>
+
+      <div id="output" class="output-box"></div>
+    </div>
+    <script src="regform2.js"></script>
+  </body>
+</html>
